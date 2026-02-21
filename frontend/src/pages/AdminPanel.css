@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f7fb;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Main Area */
+.admin-main {
+    margin-left: 280px;
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto;
+    width: calc(100% - 280px);
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    .admin-main {
+        margin-left: 240px;
+        width: calc(100% - 240px);
+        padding: 24px;
+    }
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    background: white;
+    padding: 24px 32px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+.admin-user-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.admin-user-info span {
+    font-weight: 600;
+    color: #475569;
+    font-size: 1rem;
+}
+
+.admin-avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.admin-content-area {
+    animation: fadeUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.5rem;
+    color: #3b82f6;
+    font-weight: 700;
+}
+
+/* Modals Override if any remain here */
+.admin-settings {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+}
+
+.admin-settings h2 {
+    margin-top: 0;
+    color: #0f172a;
+}

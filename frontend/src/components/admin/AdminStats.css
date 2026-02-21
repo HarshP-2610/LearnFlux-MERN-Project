@@ -1,0 +1,87 @@
+.admin-stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.stat-card {
+    background: white;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #3b82f6, #6366f1);
+    border-radius: 20px 0 0 20px;
+}
+
+.stat-card:nth-child(2)::before {
+    background: linear-gradient(180deg, #10b981, #059669);
+}
+
+.stat-card:nth-child(3)::before {
+    background: linear-gradient(180deg, #f59e0b, #d97706);
+}
+
+.stat-card:nth-child(4)::before {
+    background: linear-gradient(180deg, #ef4444, #dc2626);
+}
+
+.stat-card h3 {
+    font-size: 1.05rem;
+    color: #64748b;
+    margin: 0;
+    font-weight: 600;
+}
+
+.stat-card p {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.chart-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-container:hover {
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.08);
+}
+
+.chart-container h3 {
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 1.5rem;
+    color: #0f172a;
+    font-weight: 800;
+}
